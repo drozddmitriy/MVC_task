@@ -14,8 +14,7 @@
                         </div>
                     </nav>
                 </div>
-                <div class="card-body">
-
+                <div class="container cen">
                     <div class="form-group">
                         <form action='/addtask' class="form-inline" method="post">
                             <input type="text" class="form-control" id="taskname" name="taskname" style="width: 80%"
@@ -25,11 +24,12 @@
                             <button type="submit" class="btn btn-primary">Add task</button>
                         </form>
                     </div>
-
+                </div>
+                <div class="card-body">
                     <?php foreach ($tasks as $mas): ?>
                         <?php foreach ($mas as $task): ?>
                             <?php if ($var['id'] == $task['id_project']): ?>
-                                <div class="container">
+                                <div class="container text-right">
                                     <div class="row">
                                         <div class="col text-center">
                                             <input type="checkbox" class="form-check-input" name="checkboxmas"
@@ -51,6 +51,10 @@
                                                role="button">Delete</a>
                                         </div>
                                     </div>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary up"
+                                       role="button">up</a>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary down"
+                                       role="button">down</a>
                                     <hr>
                                 </div>
                             <?php endif; ?>

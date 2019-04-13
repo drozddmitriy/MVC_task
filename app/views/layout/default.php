@@ -13,6 +13,7 @@
     <script type="text/javascript" src="/public/scripts/checkbox.js"></script>
     <script type="text/javascript" src="/public/scripts/form.js"></script>
     <script type="text/javascript" src="/public/scripts/inputdate.js"></script>
+    <script type="text/javascript" src="/public/scripts/priority.js"></script>
     <title>Ruby</title>
 </head>
 <body>
