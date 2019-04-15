@@ -10,8 +10,9 @@ class Task extends Model
 
     public function addtaskTask($var)
     {
+        $name = strip_tags($var['taskname']);
         $params = [
-            'name' => $var['taskname'],
+            'name' => $name,
             'status' => 0,
             'id_project' => $var['id_project'],
             'account_id' => $_SESSION['account']['id'],
@@ -32,9 +33,10 @@ class Task extends Model
 
     public function uptaskTask($task, $id)
     {
+        $text = strip_tags($task['taskname']);
         $params = [
             'id' => $id,
-            'text' => $task['taskname'],
+            'text' => $text,
         ];
         $this->db->query('UPDATE tasks SET text = :text WHERE id = :id', $params);
     }

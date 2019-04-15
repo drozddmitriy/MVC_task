@@ -35,7 +35,7 @@ class Site extends Model
     public function addProject($var)
     {
         $params = [
-            'name' => $var,
+            'name' => strip_tags($var),
             'account_id' => $_SESSION['account']['id'],
         ];
         $result = $this->db->query('INSERT INTO project(name, account_id) VALUES (:name, :account_id)', $params);
@@ -44,9 +44,10 @@ class Site extends Model
 
     public function editProject($project, $id)
     {
+        $name = strip_tags($project['project']);
         $params = [
             'id' => $id,
-            'name' => $project['project'],
+            'name' => $name,
         ];
         $this->db->query('UPDATE project SET name = :name WHERE id = :id', $params);
     }

@@ -46,7 +46,6 @@ class SiteController extends Controller
             'data' => $this->model->projectData($this->route['id'])[0],
         ];
 
-
         if (!empty($_POST)) {
             if (!$this->model->projectValidate($_POST)) {
                 $this->view->message($this->model->error);

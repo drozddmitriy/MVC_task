@@ -5,7 +5,7 @@
             <div class="card f1 f2 f3" id="test">
                 <div class="card-header">
                     <nav class="navbar navbar-light bg-light">
-                        <span class="navbar-brand mb-0 h1"><?php echo($var['name']); ?></span>
+                        <span class="navbar-brand mb-0 h1"><?php echo $var['name']; ?></span>
                         <div class='text-right'>
                             <a href="update/<?php echo $var['id']; ?>" class="btn btn-primary btn-sm"
                                role="button">Update</a>
